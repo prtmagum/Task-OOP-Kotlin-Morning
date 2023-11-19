@@ -40,7 +40,7 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
     println("Group ID : "+groupId)
     println("Group Members : "+groupMembers)
     println("Session : "+session)
-    return "Group details retrieved successfully"
+    return ""
 }
 
 /**
@@ -52,8 +52,7 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
 fun myTeam(): List<Any> {
 
     val anggota = listOf("Agum Pratama","M.Rizko Sefta","Rizky Zakaria Rani","Mira Mulyani","Frida Nurul Azizah")
-    println(anggota)
-    return listOf()
+    return anggota
 }
 
 /**
@@ -66,7 +65,8 @@ fun myTeam(): List<Any> {
 fun totalMember(): Int {
     val mentor = arrayOf<String>("Kak Hasan Albana", "Kak Yogi")
     val countOfGroup = arrayOf<String>("Agum Pratama","M.Rizko Sefta","Rizky Zakaria Rani","Mira Mulyani","Frida Nurul Azizah")
-     println()
+    return mentor.size + countOfGroup.size
+
 
     return 0
 }
@@ -75,10 +75,10 @@ fun main() {
 
     myProfile()
 
-    val myTeam = ("Dasa Impi")
+    val myTeam = myTeam()
     println("My team is: $myTeam")
 
-    val totalMember = ("5")
+    val totalMember = totalMember()
     println("Total Member group : $totalMember")
 
     /**
